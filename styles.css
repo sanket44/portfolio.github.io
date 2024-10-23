@@ -11,6 +11,7 @@ body {
 }
 
 /* Navbar */
+/* Navbar */
 .navbar {
   background-color: #fff;
   position: fixed;
@@ -20,6 +21,7 @@ body {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* Flexbox container for the navbar */
 .containerNav {
   width: 90%;
   max-width: 1200px;
@@ -28,6 +30,84 @@ body {
   justify-content: space-between;
   align-items: center;
   height: 70px;
+}
+
+/* Nav Links */
+.nav-links {
+  list-style-type: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #0073e6;
+}
+
+/* Resume Button */
+.btn-resume {
+  padding: 10px 20px;
+  background-color: #0073e6;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-left: 20px;
+  transition: background-color 0.3s ease;
+}
+
+.btn-resume:hover {
+  background-color: #005bb5;
+  color: white;
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+  /* Center the logo */
+  .containerNav {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center the logo */
+    justify-content: center;
+    height: auto;
+  }
+
+  .nav-links {
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+
+  .btn-resume {
+    position: fixed;
+    bottom: 20px; /* 20px from the bottom */
+    right: 20px; /* 20px from the right */
+    margin: 0;
+    padding: 12px 25px; /* Larger padding for easier tap on mobile */
+    z-index: 1000;
+    background-color: #0073e6;
+    color: #fff;
+    border-radius: 50px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+  }
+
+  .btn-resume:hover {
+    background-color: #005bb5;
+  }
+
+  /* Make the logo centered */
+  .logo {
+    margin-bottom: 15px; /* Add some space below the logo */
+    text-align: center;
+  }
 }
 
 .container {
